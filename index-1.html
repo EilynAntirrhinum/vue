@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="js/script-1.js"></script>
+    <title>Задания 1-3</title>
+</head>
+
+<body>
+    <div id="container">
+        <strong>Задание 1</strong>
+        <p>Сегодня: {{nowDate.toLocaleDateString() + ' – ' + getFullDay(nowDate.getDay())}}, а завтра {{setNewDay() + ' – ' + getFullDay(nowDate.getDay() + 1)}}.</p>
+
+        <hr>
+        
+        <strong>Задание 2</strong>
+        <br><br>
+        <input type="number" v-model="num"> <button @click="getCount">Чётное или нечётное?</button>
+        <span> -> {{result_1}}</span>
+
+        <hr>
+
+        <strong>Задание 3</strong>
+        <br><br>
+        <input type="number" v-model="guessingNum" min="1" max="100"> <button @click="guessNum">Угадайте число от 1 до 100</button>
+        <span> -> {{result_2}}</span>
+    </div>
+</body>
+
+</html>

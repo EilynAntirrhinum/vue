@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css-4.css">
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="js/script-5.js"></script>
+    <title>v-for</title>
+</head>
+
+<body>
+    <div id="container">
+        <ul class="array">
+            <li class="array-li"
+                v-for="(item, index)  in array" 
+                @click="showCurrentItem(item)" 
+                :class="{'active-item': currentIndex == index}">
+                    {{index + 1}} - {{ item.title }}
+            </li>
+        </ul>
+
+        <p class="content">
+            {{ currentItem.content }}
+        </p>
+
+        <hr>
+
+        <input type="text" id="inpText" v-model="currentTodo" @keydown.enter=addTodoItem>
+        <span id="error_span" :class="{error: isError}" v-if="isError"> Необходимо ввести данные...</span>
+        <ul v-for="(item, index) in todos">
+            <li class="todo-li">
+                {{ item }}
+            </li>
+        </ul>
+
+        <hr>
+
+        <span>От </span>
+        <input type="number" v-model="arrBegin">
+        <br><br>
+        <span>До </span>
+        <input type="number" v-model="arrEnd">
+        <br><br>
+        <button @click="addNumInArray">OK</button>
+        <ul>
+            <li class="todo-li" v-for="(item, index) in arrNum">
+                {{ item }}
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

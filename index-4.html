@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="js/script-4.js"></script>
+    <link rel="stylesheet" href="css/css-3.css">
+    <title>Figure</title>
+</head>
+
+<body>
+    <div id="container">
+        <input type="range" class="inputs" min="100" max="500" @input="setWidth">
+        <input type="color" class="inputs" @input="setColor">
+
+        <label>
+            <input type="checkbox" class="inputs" id="colorInp" @input="setBorder"> Квадрат
+        </label>
+
+        <div id="figure"></div>
+    </div>
+</body>
+
+</html>

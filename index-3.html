@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="js/script-3.js"></script>
+    <link rel="stylesheet" href="css/css-2.css">
+    <title>Pictures and button</title>
+</head>
+
+<body>
+    <div id="container">
+        <button id="subBut" @click="activeButton" :class="{active: isActive}">
+            {{ isActive ? 'Скрыть' : 'Показать'}} инфромацию
+        </button>
+        <div id="imgDiv" v-if="isActive">
+            <img :src="imgSrc" @mouseenter="addImg" @mouseleave="delImg">
+        </div>
+    </div>
+</body>
+
+</html>

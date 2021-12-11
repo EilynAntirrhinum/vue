@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="js/script-2.js"></script>
+    <link rel="stylesheet" href="css/css-1.css">
+    <title>Форма регистрации</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="auth" v-show="count == 0">
+            <h1>ВХОД</h1>
+            <input type="text" placeholder="Логин" class="inputs" id="login">
+            <input type="password" placeholder="Пароль" class="inputs" id="pass">
+            <button id="subBut" class="buttons" @click="clickPlus">Вход</button>
+        </div>
+
+        <div id="tabs" v-show="count == 1">
+            <header>
+                <button id="backBut" class="buttons" @click="clickMinus">Назад</button>
+                <span id="span-tabs">TABS</span>
+            </header>
+
+            <div id="headers">
+                <div class="tab-header_1" id="1" @click="openTab" :class="{'active-item': currentTab == 1}">NCT 127</div>
+                <div class="tab-header_2" id="2" @click="openTab" :class="{'active-item': currentTab == 2}">RENJUN</div>
+                <div class="tab-header_3" id="3" @click="openTab" :class="{'active-item': currentTab == 3}">SURPRISE</div>
+            </div>
+
+            <div class="tab-body_1 tab-body" v-show="currentTab == 1">
+                <img src="img/nct-1.jpg">
+                <img src="img/nct-2.jpg">
+            </div>
+
+
+            <div class="tab-body_2 tab-body" v-show="currentTab == 2">
+                <img src="img/renjun-1.jpg">
+                <img src="img/renjun-2.jpg">
+            </div>
+
+
+            <div class="tab-body_3 tab-body" v-show="currentTab == 3">
+                <img src="img/meme-1.jpg">
+                <img src="img/meme-2.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

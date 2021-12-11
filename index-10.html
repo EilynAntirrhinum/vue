@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css-9.css">
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="js/script-10.js"></script>
+    <title>Stepper</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="descript">
+            <h1>Компания "Alone at home"</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quia ipsum facilis odit fugiat libero, iste,
+                velit repudiandae voluptates ad sunt id dolorum quos quidem assumenda officiis architecto, explicabo
+                impedit obcaecati facere? Quaerat fugit at voluptate ab, pariatur laborum explicabo dicta a eum ea
+                accusantium, exercitationem atque dolores quod tempora doloribus nostrum perferendis maxime facilis
+                animi, corporis sapiente aliquam officia? Amet velit nesciunt repellendus. Labore temporibus veniam nam
+                eaque? Distinctio quod repudiandae consequuntur consectetur deleniti magnam a necessitatibus qui at
+                maxime, corrupti ullam illum blanditiis obcaecati quia, dolorem illo similique laudantium magni
+                temporibus eum quam ratione.
+            </p>
+            <hr>
+            <p>Выбор даты и места самоизоляции</p>
+            <hr>
+        </div>
+        <div id="steps">
+            <div v-for="(item, index) in steps">
+                <span class="colored" :class="{active: current == index}">{{item.id}}</span>
+                <span>{{item.text}}</span>
+            </div>
+        </div>
+        <button class="prev" @click="prevStep">Назад</button>
+        <button class="next" @click="nextStep">Вперёд</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css-7.css">
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="js/script-8.js"></script>
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="cb-div">
+            <label>
+                <input type="checkbox" @click="doneToDo('a1')">
+                Прочитать книгу
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" @click="doneToDo('a2')">
+                Сходить за покупками
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" @click="doneToDo('a3')">
+                Совершить подвиг
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" @click="doneToDo('a4')">
+                Накормить попугая
+            </label>
+            <br>
+            <label>
+                <input type="checkbox" @click="doneToDo('a5')">
+                Сделать задания
+            </label>
+        </div>
+        <div id="li-div">
+            <ul>
+                <li id="a1">Прочитать книгу</li>
+                <li id="a2">Сходить за покупками</li>
+                <li id="a3">Совершить подвиг</li>
+                <li id="a4">Накормить попугая</li>
+                <li id="a5">Сделать задания</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

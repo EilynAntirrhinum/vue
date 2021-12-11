@@ -1,0 +1,38 @@
+.content {
+    min-height: 100px;
+    padding: 20px;
+    border: 1px black solid;
+}
+.array-li {
+    list-style: none;
+    min-height: 20px;
+    max-width: 300px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px black solid;
+    box-shadow: 5px 5px 10px rgba(143, 143, 143, 0.664);
+    background: white;
+    cursor: pointer;
+}
+.active-item {
+    background: lightgray;
+    transform: scale(1.1);
+}
+#error_span {
+    font-size: 14px;
+    color: red;
+}
+.todo-li {
+    list-style: none;
+    min-height: 20px;
+    max-width: 150px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px black solid;
+}
+#inpText {
+    height: 30px;
+    width: 300px;
+    border: rgb(129, 129, 129) 1px solid;
+    border-radius: 5px;
+}

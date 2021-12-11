@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css-5.css">
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="js/script-6.js"></script>
+    <title>Vue</title>
+</head>
+
+<body>
+    <div id="container">
+        <ul class="array">
+            <li class="array-li"
+                v-for="(item, index)  in array" 
+                @click="showCurrentItem(item)" 
+                :class="{'active-item': currentIndex == index}">
+                    {{index + 1}} - {{ item.title }}
+            </li>
+        </ul>
+
+        <p class="content">
+            <img :src="currentItem.image">
+            <br>
+            {{currentItem.content}}
+        </p>
+    </div>
+</body>
+
+</html>
